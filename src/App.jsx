@@ -70,6 +70,8 @@ export function Form ( { addItem, initialItems } )
 	return (
 		<form className="add-form" onSubmit={ handleSubmit }>
 			<h3>What do you need for your trip? 😊</h3>
+			<div className="add-form-input">
+			
 			<select name="quantity" value={ formData.quantity } onChange={ handleChange }>
 				{ [ ...new Array( 20 ) ].map( ( _, index ) => (
 
@@ -79,6 +81,7 @@ export function Form ( { addItem, initialItems } )
 			</select>
 			<input name="description" type="text" placeholder="Items..." value={ formData.description } onChange={ handleChange } />
 			<button>Add</button>
+			</div>
 
 		</form>
 	);
